@@ -74,6 +74,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  inspection:
+    dependency: "direct main"
+    description:
+      name: inspection
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.13"
   lints:
     dependency: transitive
     description:

@@ -1,5 +1,5 @@
-import 'dart:js';
-
+import 'package:nutritionapp/hawa.dart';
+import 'package:path/path.dart';
 import 'package:flutter/material.dart';
 import 'package:nutritionapp/detailsPage.dart';
 
@@ -175,56 +175,68 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-Widget _buildFoodItem(String imgPath, String foodName, String price) {
-  return Padding(
-    padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
-    child: InkWell(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => DetailsPage(
-                    heroTag: imgPath, foodName: foodName, foodPrice: price)),
-          );
-        },
-        child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Container(
-                child: Row(
-                  children: [
-                    Hero(
-                        tag: imgPath,
-                        child: Image(
-                          image: AssetImage(imgPath),
-                          fit: BoxFit.cover,
-                          height: 80.0,
-                          width: 75.0,
-                        )),
-                    SizedBox(width: 10.0),
-                    Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            foodName,
-                            style: TextStyle(
-                                fontFamily: 'Montserrat',
-                                fontSize: 17.0,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            price,
-                            style: TextStyle(
-                                color: Colors.grey,
-                                fontSize: 15.0,
-                                fontFamily: 'Montserrat'),
-                          )
-                        ])
-                  ],
+Widget build(BuildContext context){
+  _buildFoodItem(String imgPath, String foodName, String price)
+  return
+    Padding(
+      padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
+      child: InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => abc(),
+                ));
+            // Navigator.of(context).push(
+            //   MaterialPageRoute(
+            //       builder: (context) => DetailsPage(
+            //           heroTag: imgPath, foodName: foodName, foodPrice: price)),
+            // );
+          },
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Container(
+                  child: Row(
+                    children: [
+                      Hero(
+                          tag: imgPath,
+                          child: Image(
+                            image: AssetImage(imgPath),
+                            fit: BoxFit.cover,
+                            height: 80.0,
+                            width: 75.0,
+                          )),
+                      SizedBox(width: 10.0),
+                      Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              foodName,
+                              style: TextStyle(
+                                  fontFamily: 'Montserrat',
+                                  fontSize: 17.0,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              price,
+                              style: TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 15.0,
+                                  fontFamily: 'Montserrat'),
+                            )
+                          ])
+                    ],
+                  ),
                 ),
-              ),
-              IconButton(
-                  onPressed: () {}, color: Colors.black, icon: Icon(Icons.add))
-            ])),
-  );
+                IconButton(
+                    onPressed: () {}, color: Colors.black, icon: Icon(Icons.add))
+              ])),
+    );
+  }
+
+void _buildFoodItem(Type string, imgPath, Type string2, foodName, Type string3, price) {
 }
+
+}
+};
