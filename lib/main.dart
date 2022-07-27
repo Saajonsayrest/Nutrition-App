@@ -175,10 +175,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-Widget build(BuildContext context){
-  _buildFoodItem(String imgPath, String foodName, String price)
-  return
-    Padding(
+_buildFoodItem(String imgPath, String foodName, String price)
+  return Padding(
       padding: EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
       child: InkWell(
           onTap: () {
@@ -235,8 +233,4 @@ Widget build(BuildContext context){
     );
   }
 
-void _buildFoodItem(Type string, imgPath, Type string2, foodName, Type string3, price) {
-}
 
-}
-};
